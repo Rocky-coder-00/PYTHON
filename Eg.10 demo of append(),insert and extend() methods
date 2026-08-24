@@ -1,0 +1,5 @@
+colours =['red', 'orange', 'green']
+print(colours)
+
+colour.append('black')
+print(colours)
