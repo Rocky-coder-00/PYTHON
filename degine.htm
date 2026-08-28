@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Cool cursive font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Piyush Patial</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .name-box {
+        text-align: center;
+      }
+
+      .name {
+        color: white;
+        font-family: "Allura", cursive;
+        font-size: 120px;
+        white-space: nowrap;
+
+        /* Start hidden */
+        width: 0;
+        overflow: hidden;
+
+        /* Typing cursor */
+        border-right: 3px solid white;
+
+        animation:
+          typing 4s steps(13) forwards,
+          cursor 0.7s infinite;
+      }
+
+      /* Name writes from left to right */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 13ch;
+        }
+      }
+
+      /* Blinking cursor */
+      @keyframes cursor {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      /* Small line below */
+      .line {
+        width: 0;
+        height: 2px;
+        background: white;
+        margin: 15px auto;
+        animation: line 1.5s ease 4s forwards;
+      }
+
+      @keyframes line {
+        to {
+          width: 300px;
+        }
+      }
+
+      /* Works better on phones */
+      @media (max-width: 600px) {
+        .name {
+          font-size: 70px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="name-box">
+      <div class="name">Piyush Patial</div>
+
+      <div class="line"></div>
+    </div>
+  </body>
+</html>
